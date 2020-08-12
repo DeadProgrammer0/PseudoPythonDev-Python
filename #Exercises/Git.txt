@@ -1,0 +1,262 @@
+Create a new floder in which you want to create your repository
+And then open Git Bash Here in that folder Then
+To make your Folder a repository use this command
+    
+    $ git init
+    This command initialize the folder as a repository by adding .git folder.
+    You can Confirm it by typing 
+    $ ls -la
+
+The first Command After $ git init you should run in Git Bash Here is " git status ".
+
+    $ git status  
+    Gives you the status of the repository.
+
+If you want to commit your files first you will have to stage the file and then commit it.
+
+File >> Stage >> Commit.
+
+To Stage your file you'll have to use " git add . "
+
+    $ git add . 
+    This command stages all the files present in your repository.
+
+But before you work with you repository you'll have to give git your Name and Email.
+
+By running these Commands :-
+
+    $ git config --global user.email "you@example.com"
+    $ git config --global user.name "Your Name"
+
+After filling all details you can commit you file by 
+
+    $ git commit -m "messege"
+
+Once your file is commited then you can see all the edits done to the file by
+
+    $ git log
+    This will show all the changes made to the file and who changed it.
+
+To add you repository to Online Website like GitHub you have to make a repository on Github and then copy 
+Its SSH link and the use this command
+
+    $ git remote add origin {SSH_LINK}
+
+
+After Setting up SSH key you can Push and Pull your files on a Online Website like GitHub.
+By using these Commands
+
+    $ git push -u origin master
+    This is used to Push Files on GitHub.
+
+    $ git pull origin master
+    This is used t to Pull Files from GitHub.
+
+
+If you want to check the Difference between working directory and staging area then
+
+    $ git diff 
+    This command shows the the Difference between the working directory and staging area.
+
+If you want to check difference between current staging area and last commit then you can use 
+
+    $ git dif --staged
+    This command will show the difference between staging area and last commit.
+
+If you want to see Difference of a specific file then use this
+
+    $ git diff {File_Name}
+
+If your File is Staged then you have to use this Flag 
+
+    $ git diff --staged {File_Name}
+
+If you had staged a file but now you want the previous version of your file i.e. last commit
+In that case first you have to Unstage the File and the reset to last commit by using these Commands
+
+    $ git reset {File_Name}
+    This Command Unstages the Staged File.
+
+Then 
+
+    $ git checkout {File_Name}
+    This Command reset the  file to the last commit.
+
+If you want all the  files to reset to the last Commit then use this
+
+    $ git checkout .
+
+Difference between all Staging Functions
+
+    $ git add --a 
+    Stages all.
+    
+    $ git add .
+    Stages New and Modified, without Deleted.
+
+    $ git add -u
+    Stages Modified and Deleted, without New.
+
+If you Want to some other repository from GitHub then use these Commands
+
+    $ git clone {SSH_LINK}
+    This will Clone the repository as a Folder.
+
+    $ git clone {SSH_LINK} . 
+    This will Clone the repository as a repository that can be further tracked.
+
+Branching in git
+
+To check all current Branches
+
+    $ git branch
+    This shows all the current Branches.
+
+    $ git branch -v 
+    This shows all branches along with the All last commits
+
+To add new Branches in repository 
+
+    $ git branch {branch_name(Branch names can only be letters, numbers, and hyphens.)}
+    This will add the new branch.
+
+To switch to the new branch 
+
+    $ git checkout {branch_name}
+
+If you want to merger the Branches then
+
+    $ git merge {branch_name}
+
+If you want to Delete a branch just your device Then
+
+    $ git branch -d {branch_name}
+    This will just Delete the branch from your device not from GitHub.
+
+If you want to Delete a branch from GitHub then 
+
+    $ git push origin --delete {branch_name}
+    This will just Delete the branch from GitHub not from your device.
+
+If you want to delete your repository then
+
+    $ rm -rf .git 
+    This command will delete the .git file and your repository will become a normal folder that is not being tracked.
+
+Some useful Linux commands to learn   
+
+
+    $ pwd
+    Shows present working directory.
+
+    $ ls
+    This Command Lists all the content of pwd.
+
+    $ cd
+    This is used to change directory.
+
+If you want to Commit Directly and skip the staging Area then use this
+
+    $ git commit -a -m "messege"
+    This will Only commit the files which are being tracked already, this will not commit untracked files.
+
+If you want to delete any file from your repository then you can use 
+
+    $ git rm {File_Name}
+    This will delete the file and stage the changes for Commit.
+
+If you want to Rename a file from your repository then use
+
+    $ git mv {File_Name} {New_Name}
+    This will Rename the file and stage the changes for Commit.
+
+If you want to remove a file from Tracking area Then
+
+    $ git rm --cached {File_Name}
+    This will remove the File from Tracking list but it doesn't remove the file from repository.
+
+After adding file to untracked list you have to add the file into .gitignore .
+
+If you want to check previous commits you can use
+
+    $ git log
+    This will just show the name, date and time and Author.
+
+But if you want to check the difference too along with the previous data then
+
+    $ git log -p
+    This will show you the difference too
+
+    $ git log -p -{number_of_commits}
+    This will show you all the desired Commits.
+
+If you want to browse all commits with some short summary then use
+
+    $ git log --stat
+    This will browse commits with a short summary.
+
+Some more git log commands
+
+    $ git log --pretty=oneline
+    This will show all the commits in one line format.
+
+    $ git log --pretty=short 
+    This will show short details of commits.
+
+    $ git log --pretty=full
+    This will show full details of commits.
+
+If you want more --pretty formats then 
+check this out - https://git-scm.com/docs/pretty-formats
+
+example :-
+    $ git log --pretty="%h %an %ae"
+
+If you want to merge your change in a previous commit then
+
+    $ git commit -amend 
+
+
+If you want to Unstage a staged file then
+
+    $ git restore --staged {File_Name}
+    This will Unstage the desired file.
+
+If you want to reset your current file version to last commit then
+
+    $ git checkout -- {File_Name}
+    $ git restore {File_Name}
+
+If you want to reset all you files to last commit Then
+
+    $ git checkout -f 
+    $ git restore .
+    This will reset all the files to the last commit all your Modified Data that is not commited will get lost.
+
+Alias
+Alias is used to make long commands short 
+
+    $ git config --global alias.{short_name} '{original_command}'
+
+Some example:-
+
+    $ git config --global alias.st 'status'
+
+    $ git config --global alias.unstage 'restore --staged --'
+
+    $ git config --global alias.last 'log -p -1'
+
+
+Git Branches
+A easy command for direct checkout to the new genrated branch
+
+    $ git checkout -b {branch_name}
+
+If you want to see all remotes then
+
+    $ git remotes -v
+    This will show the connected Remotes.
+
+If you want to delete a branch from the remote then
+
+    % git push -d origin {branch_name}
