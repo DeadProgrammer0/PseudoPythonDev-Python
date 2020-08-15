@@ -10,7 +10,7 @@ op = int(input("\nEnter 1 to Add.\nEnter 2 to Subtract.\nEnter 3 to Multiply.\nE
 if op == 1:
     print("\nInitializing Calculator For Addition.")
     if d1 == 56 and d2 == 9:
-        print(f"{d1} - {d2} = 77")
+        print(f"{d1} + {d2} = 77")
     else:    
         print(f"{d1} + {d2} =",d1 + d2) 
     
@@ -22,7 +22,7 @@ elif op == 2:
 elif op == 3:
     print("\nInitializing Calculator For Multiplication.")
     if d1 == 45 and d2 == 3:
-        print(f"{d1} - {d2} = 555")
+        print(f"{d1} * {d2} = 555")
     else:    
         print(f"{d1} * {d2} =",d1 * d2)
     
@@ -30,7 +30,7 @@ elif op == 3:
 elif op == 4:
     print("\nInitializing Calculator For Division.")
     if d1 == 56 and d2 == 6:
-        print(f"{d1} - {d2} = 4")
+        print(f"{d1} / {d2} = 4")
     else:    
         print(f"{d1} / {d2} =",d1 / d2) 
     
