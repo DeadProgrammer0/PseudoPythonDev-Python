@@ -5,12 +5,12 @@ i = 0
 while(1):
     if i < 10:
         i = i + 1
-        continue
+        continue #Skips all iterations and enters the Loop again.
 
     i = i + 1
     print(i , end=" ")
     if i == 45:
-        break
+        break   #Breaks the loop
 
 
 # Quiz 4. 
