@@ -16,3 +16,7 @@
 # Untill the user doesn't enter a number greater than 100 program continues.
 # Solution in #13. 
 
+
+# Quiz 5 : Create a program which takes Input from user and asks for to enter A number then create a function that 
+# Generates Fibunacci sequence and give the Fibunacci for the the numbers which was taken from user earlier.
+# Solution in #23.
