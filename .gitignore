@@ -1,2 +1,4 @@
 \#temp.py
-
+*.txt
+*.json
+tempCodeRunnerFile.py
