@@ -2,3 +2,6 @@
 *.txt
 *.json
 tempCodeRunnerFile.py
+
+File*.py
+__pycache__/
