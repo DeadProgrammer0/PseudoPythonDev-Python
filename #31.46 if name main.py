@@ -1,3 +1,4 @@
 import File1
 
-print(File1.Fibunacci_it(10))
+File1.run()
+File1.run2()

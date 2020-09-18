@@ -41,11 +41,8 @@ print(f"Itrative. Your Factorial is {Factorial_it(inp)}")
 # Formula - n = n-1 + n-2
 
 def Fibunacci_rec(n):
-    if n == 0:
-        return 0
-
-    elif n == 1:
-        return 1
+    if n<2:
+        return n
 
     else:
         return Fibunacci_rec(n-1) + Fibunacci_rec(n-2)

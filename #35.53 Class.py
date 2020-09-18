@@ -5,13 +5,14 @@ from functools import reduce
 class student:
     pass
 
+# Here we created three Objects harry, rohan and hamad. Which belongs to Student Class.
 harry = student()
 rohan = student()
 hamad = student()
 
 l1 = [1,34,6,7,8,8,9,1,4]
 
-
+# These are some variables.
 harry.name = "Harry"
 harry.std = 12
 harry.age = 16

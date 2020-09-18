@@ -36,6 +36,7 @@ def Table(a):
     while(1):
     
         if inc <= 10:
+            
             print(f"{a} * {inc} =",a*inc)
             inc = inc + 1
             continue
@@ -46,4 +47,4 @@ def Table(a):
     return "Here is your Table."
       
 print(Table.__doc__)      
-print(Table(20))
+print(Table(9))

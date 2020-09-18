@@ -47,7 +47,7 @@ rohan.Office_Time = "12 to 6"
 print("Rohan",rohan.Office_Time)
 print("Harry",harry.Office_Time)
 
-# Getting all the Class variables and Instance variables in form of Dict using __dict__.
+# Getting all the Class variables and Instance variables in form of Dict using __dict__ attribute.
 
 # Getting Dict of Class variables.
 print(Employee.__dict__)

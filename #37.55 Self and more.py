@@ -19,6 +19,7 @@ class Employee:
 
     
     # Accessing variables using a Function.
+    # Self is the defualt variable taken by all function that is used in place of Object.
     @design
     def access(self):
         print(f"Name : {self.name}\nSalary : {self.salary}\nRole : {self.role}")
