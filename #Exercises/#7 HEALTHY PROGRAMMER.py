@@ -165,7 +165,7 @@ if __name__ == "__main__":
         while temp == 1:
             ct = (datetime.now()).strftime("%H:%M")
 
-            if ct > "09:00" and ct < "20:00":
+            if ct > "09:00" and ct < "17:00":
                 print("Started...")
                 time.sleep(eyes_int) 
                 eyes()
