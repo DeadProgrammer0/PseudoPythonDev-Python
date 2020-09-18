@@ -2,6 +2,7 @@
 *.txt
 *.json
 tempCodeRunnerFile.py
+*.mp3
 
 File*.py
 __pycache__/
