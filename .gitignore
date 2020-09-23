@@ -7,5 +7,6 @@ tempCodeRunnerFile.py
 File*.py
 __pycache__/
 Youtube-API/
-\#Projects/
+\#Youtube-Learning/
 *.png
+*.ipynb
