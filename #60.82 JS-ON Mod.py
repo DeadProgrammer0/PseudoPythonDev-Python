@@ -4,7 +4,7 @@ data = '{"var1":"Harry","var2":"54","var3":"True"}'
 
 
 ab = json.loads(data)
-print(ab['var3'])
+
 
 x = {
     "name": "John",
@@ -21,9 +21,16 @@ x = {
 }
 
 with open('jsontest.json','w') as j:
-    j.write(json.dumps(x))
+    j.write(json.dumps(data))
 
 
 with open('dict.json') as f:
     ab1 = json.loads(f.read())
 print(ab1)
+
+with open('jsontest2.json','w') as f:
+    json.dump(x,f,indent=True)
+
+with open('jsontest2.json','r') as f:
+    ab2 = json.load(f)
+print(ab2)

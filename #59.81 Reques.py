@@ -1,6 +1,4 @@
 import requests
-from bs4 import BeautifulSoup as bs
-
 
 # TODO : Make program using any API key.
 
