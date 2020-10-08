@@ -34,3 +34,5 @@ with open('jsontest2.json','w') as f:
 with open('jsontest2.json','r') as f:
     ab2 = json.load(f)
 print(ab2)
+
+print('Hello from Parrot!')
