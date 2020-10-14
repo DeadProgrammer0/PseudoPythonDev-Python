@@ -19,11 +19,11 @@ class B(A):
     def __init__(self):
         
         super().__init__()
-        print(super().s) 
         self.var1 = "I am in Class B constructor."
         self.classvar1 = "I am Class B instance variable"
         self.special = "B Special"
-        
+        self.classvar1 = super().classvar1
+        self.s = super().s
 
 
 a = A()
@@ -35,3 +35,4 @@ print(a.classvar1)
 print(b.var1)
 print(b.classvar1)
 print(b.special)
+print(b.s)
