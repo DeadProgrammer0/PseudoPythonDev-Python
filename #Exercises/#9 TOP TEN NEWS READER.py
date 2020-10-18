@@ -39,15 +39,15 @@ if __name__ == "__main__":
 
     for article,num in zip(json_data['articles'],range(1,len(json_data['articles'])+1)):
         title = article['title']
-        title = unicodedata.normalize('NFKD', title).encode('ascii', 'ignore')
+        # title = unicodedata.normalize('NFKD', title).encode('UTF-8', 'ignore')
         description = article['description']
-        description = unicodedata.normalize('NFKD', description).encode('ascii', 'ignore')
+        # description = unicodedata.normalize('NFKD', description).encode('UTF-8', 'ignore')
         if article['content'] != None:
             content = article['content']
             content = content[:-13]
         else:
             content = 'No more info on this topic.'
-        content = unicodedata.normalize('NFKD', content).encode('ascii', 'ignore')
+        # content = unicodedata.normalize('NFKD', content).encode('UTF-8', 'ignore')
         news_url = article['url']
         publish_time = article['publishedAt']
         publish_time = publish_time.split('T')
@@ -55,12 +55,14 @@ if __name__ == "__main__":
         author = article['author']
         
         if num == 1:
-            Headline = f'Headline Number {num}. Title : {title}\nDetails : {description}.\n More Info : {content[:-13]}\n For more details and link of Articles open Articles.txt.'
+            Headline = f'\nHeadline Number {num}. Title : {title}\nDetails : {description}...\n\nMore Info : {content[:-13]}\nFor more details and link of Articles open Articles.txt.'
         else:
-            Headline = f'\n\nNext News. Headline Number {num}. Title : {title}\nDetails : {description}.\n More Info : {content}\n For more details and link of Articles open Articles.txt.'
+            Headline = f'\n\nNext News. Headline Number {num}. Title : {title}\nDetails : {description}...\n\nMore Info : {content}\nFor more details and link of Articles open Articles.txt.'
 
         TXT_content = f'\n\nHeadline {num}\nURL - {news_url}\nPublished at - {publish_time}\nAuthor - {author}'
         TXT_file.write(TXT_content)
 
+        print(Headline)
         speak.Speak(Headline)
+        
     TXT_file.close()
