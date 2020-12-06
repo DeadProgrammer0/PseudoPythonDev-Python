@@ -15,3 +15,7 @@ Regex Data/
 Test Folder/
 Letters/
 temp.html
+Web-Scraper/
+*.jpeg
+*.jpg 
+*.png 

@@ -47,8 +47,8 @@ Ms. 420
 # for match in matches:
 #     print(match)
 
-with open('Regex Data\data.txt','r',encoding='utf-8') as f:
-    mystr2 = f.read()
+# with open('Regex Data\data.txt','r',encoding='utf-8') as f:
+#     mystr2 = f.read()
 
 # pattern = re.compile(r'\d{3}\W\d{3}\W\d{4}')
 # matches = pattern.finditer(mystr2)
@@ -100,9 +100,5 @@ pattern = re.compile(r'start', re.I)
 
 matches = pattern.search(sentence)
 
-# print(matches)
+print(matches)
 
-
-n = int(input("Enter a number : "))
-for i in range(1,n+1):
-    print(i,end=" ")
